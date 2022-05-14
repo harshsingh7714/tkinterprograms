@@ -1,0 +1,26 @@
+from tkinter import*
+from turtle import width
+root=Tk()
+v=IntVar()
+
+root.title('Registration Form')
+Label(root,text='First Name: ').grid(row=0,column=0)
+Entry(root,width=35).grid(row=0,column=1)
+Label(root,text='Last Name: ').grid(row=1,column=0)
+Entry(root,width=35).grid(row=1,column=1)
+Label(root,text='Reg No: ').grid(row=2,column=0)
+Entry(root,width=35).grid(row=2,column=1)
+Label(root,text='Dept: ').grid(row=3,column=0)
+Entry(root,width=35).grid(row=3,column=1)
+Label(root,text='Gender: ').grid(row=4,column=0)
+
+Radiobutton(root,text='Male',variable=v,value=1).grid(row=4,column=1)
+Radiobutton(root,text='Female',variable=v,value=2).grid(row=4,column=2)
+Label(root,text='Age: ').grid(row=5,column=0)
+Spinbox(root,from_= 0,to= 100).grid(row=5,column=1)
+Button(root,text='Insert').grid(row=6,column=0)
+Button(root,text='Update').grid(row=6,column=1)
+Button(root,text='Delete').grid(row=7,column=0)
+Button(root,text='Select').grid(row=7,column=1)
+Button(root,text='Submit').grid(row=7,column=2)
+root.mainloop()

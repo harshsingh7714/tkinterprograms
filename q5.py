@@ -1,0 +1,30 @@
+from tkinter import*
+from turtle import width
+root=Tk()
+v=IntVar()
+
+root.title('Movie Ticket Booking')
+Label(root,text='Movie BookingId: ').grid(row=0,column=0)
+Entry(root,width=35).grid(row=0,column=1)
+Label(root,text='Person Name: ').grid(row=1,column=0)
+Entry(root,width=35).grid(row=1,column=1)
+Label(root,text='Contact No: ').grid(row=2,column=0)
+Entry(root,width=35).grid(row=2,column=1)
+Label(root,text='Movie Name: ').grid(row=3,column=0)
+Entry(root,width=35).grid(row=3,column=1)
+Label(root,text='Class: ').grid(row=4,column=0)
+
+Radiobutton(root,text='A',variable=v,value=1).grid(row=4,column=1)
+Radiobutton(root,text='B',variable=v,value=2).grid(row=4,column=2)
+Label(root,text='Time of Show: ').grid(row=5,column=0)
+
+Radiobutton(root,text='7.15pm',variable=v,value=1).grid(row=5,column=1)
+Radiobutton(root,text='9.00am',variable=v,value=2).grid(row=5,column=2)
+Label(root,text='No of Tickets: ').grid(row=6,column=0)
+Scale(root,from_= 0,to= 10,orient=HORIZONTAL).grid(row=6,column=1)
+Button(root,text='Insert').grid(row=7,column=0)
+Button(root,text='Update').grid(row=7,column=1)
+Button(root,text='Delete').grid(row=8,column=0)
+Button(root,text='Select').grid(row=8,column=1)
+Button(root,text='Submit',command=root.destroy).grid(row=8,column=2)
+root.mainloop()
