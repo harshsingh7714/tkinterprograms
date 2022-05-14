@@ -1,0 +1,9 @@
+git config --global user-name Harsh
+git config --global user-email harshsingh7714@gmail.com
+touch .gitignore
+git init
+git add .
+git commit -m "Basic commands" 
+git status
+git remote add origin {paste the ssh link here}
+git push origin master
